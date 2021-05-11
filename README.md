@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [(https://github.com/sami-peltonen/frontend-mentor-challenges)]
+- Solution URL: [(https://sami-peltonen.github.io/testimonials/)]
 
 ## My process
 
