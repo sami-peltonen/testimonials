@@ -1,0 +1,138 @@
+:root {
+  --clr-primary-one: hsl(263, 55%, 52%);
+  --clr-primary-two: hsl(217, 19%, 35%);
+  --clr-primary-three: hsl(219, 29%, 14%);
+  --clr-primary-four: hsl(0, 0%, 100%);
+
+  --clr-neutral-one: hsl(0, 0%, 81%);
+  --clr-neutral-two: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  margin: 0;
+  background: var(--clr-neutral-two);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 10rem;
+}
+
+div {
+  margin: 0.5rem;
+}
+
+.testimonial_1,
+.testimonial_2,
+.testimonial_3,
+.testimonial_4,
+.testimonial_5 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.testimonial_1 {
+  background: var(--clr-primary-one);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+  color: var(--clr-neutral-two);
+  grid-column: span 2;
+}
+
+.testimonial_2 {
+  background: var(--clr-primary-two);
+  color: var(--clr-neutral-two);
+}
+
+.testimonial_3 {
+  grid-row: span 2;
+  background: white;
+}
+
+.testimonial_4 {
+  background: white;
+}
+
+.testimonial_5 {
+  background: var(--clr-primary-three);
+  color: white;
+  grid-column: span 2;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+section {
+  margin: 1rem 1.5rem;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.middle {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.bottom {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  opacity: 70%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.title {
+  opacity: 50%;
+}
+
+@media (max-width: 1400px) {
+  .grid-container {
+    margin: 3rem 3rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .grid-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    margin: 3rem 7rem;
+  }
+
+  .testimonial_1,
+  .testimonial_2,
+  .testimonial_3,
+  .testimonial_4,
+  .testimonial_5 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  @media (max-width: 550px) {
+    .grid-container {
+      margin: 1rem 0.5rem;
+    }
+  }
+}
